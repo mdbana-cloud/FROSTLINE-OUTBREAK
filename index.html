@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROSTLINE OUTBREAK - Linebreakers Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0a0f1e 0%, #0b1525 100%);
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, 'Inter', sans-serif;
+            color: #eef5ff;
+            line-height: 1.5;
+        }
+
+        /* Frost overlay effect */
+        .frost-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 20% 40%, rgba(80, 180, 255, 0.08) 2%, transparent 2.5%);
+            background-size: 48px 48px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid rgba(80, 180, 255, 0.3);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #c0eaff, #4a9eff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .logo p {
+            font-size: 0.8rem;
+            color: #8bb9fe;
+        }
+
+        .badge {
+            background: rgba(20, 40, 70, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            border-left: 3px solid #4a9eff;
+            font-size: 0.85rem;
+        }
+
+        .hero {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 2rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(90, 170, 255, 0.3);
+            backdrop-filter: blur(4px);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .hero .highlight {
+            color: #7bc5ff;
+            text-shadow: 0 0 6px rgba(60, 160, 255, 0.5);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: rgba(10, 20, 35, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(70, 150, 255, 0.3);
+            transition: transform 0.2s ease, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #4a9eff;
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status {
+            background: #0e2a3a;
+            color: #9ad7ff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 60px;
+            font-size: 0.75rem;
+            display: inline-block;
+        }
+
+        .btn {
+            background: linear-gradient(95deg, #1f6392, #0e3a5a);
+            border: none;
+            padding: 0.7rem 1.4rem;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-light {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            border: 1px solid #7bc5ff;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            text-align: center;
+            border-top: 1px solid rgba(90, 170, 255, 0.2);
+            font-size: 0.8rem;
+        }
+
+        a {
+            color: #9acdff;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 1rem;
+            }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="frost-bg"></div>
+<div class="container">
+    <header>
+        <div class="logo">
+            <h1>❄️ FROSTLINE OUTBREAK</h1>
+            <p>Linebreakers Unit — No zone is safe twice</p>
+        </div>
+        <div class="badge">
+            ⚡ EOS CONNECTED • DYNAMIC FROST SYSTEM
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>THE <span class="highlight">FROSTLINE</span> DOESN'T WAIT.</h2>
+        <p style="margin: 1rem 0; max-width: 700px;">Co-op PvE extraction shooter. Enter shifting frozen zones, survive White Swarm, outrun the living blizzard. Every mission rewrites itself.</p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <span class="status">🎮 1-4 PLAYERS</span>
+            <span class="status">❄️ DYNAMIC MAP</span>
+            <span class="status">🔥 HEAT = LIFE</span>
+        </div>
+    </section>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🌨️ THE FROSTLINE SYSTEM</h3>
+            <p>Real-time blizzard wall that rewrites paths, revives frozen enemies, and seals zones forever. No two extractions are alike.</p>
+        </div>
+        <div class="card">
+            <h3>⚙️ LINEBREAKER CLASSES</h3>
+            <p>Engineer · Scout · Medic · Breaker. Heat management & team synergy are mandatory for deep runs.</p>
+        </div>
+        <div class="card">
+            <h3>🧊 EOS INTEGRATION</h3>
+            <p>Cross-platform invites, persistent squads, cloud saves and anti-cheat. Powered by Epic Online Services.</p>
+        </div>
+    </div>
+
+    <div style="background: #07121faa; border-radius: 1.5rem; padding: 1.5rem; margin: 2rem 0;">
+        <h3>🔗 Official game data & verification</h3>
+        <p>This application website is used for <strong>Epic Online Services</strong> authentication and privacy consent. The game <em>Frostline Outbreak</em> uses EOS for:</p>
+        <ul style="margin: 1rem 0 0 1.5rem;">
+            <li>✔️ Peer-to-peer & dedicated sessions</li>
+            <li>✔️ Crossplay (PC / consoles)</li>
+            <li>✔️ Player progression & stats</li>
+            <li>✔️ Achievements and leaderboards</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© AURORA CORE / FROSTLINE OUTBREAK — All rights reserved.<br>
+        <a href="privacy-policy.html">Privacy Policy</a> | <a href="#">Support</a> | <a href="#">Discord</a><br>
+        <span style="font-size: 0.7rem;">Frostline is a living cataclysm. Trust nothing but your squad.</span></p>
+    </footer>
+</div>
+</body>
+</html>
